@@ -15,7 +15,7 @@ Aplicacion de gestión de punto de venta con Usuarios y Detalle
 
 - Se usa la arquitectura de capas, separando los repos de los servicios para hacer un uso de efectivo de los servicios en los **repositorios**
 
-- El @GetMapping vacio lleva al @GetMapping padre
+- El `@GetMapping` vacio lleva al `@RequestMapping` padre
 
 ## Curiosidades
 

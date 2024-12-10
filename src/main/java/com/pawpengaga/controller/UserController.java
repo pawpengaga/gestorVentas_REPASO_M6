@@ -18,7 +18,7 @@ public class UserController {
   @Autowired
   UserRepository userRepo;
 
-  @GetMapping // El @GetMapping vacio lleva al @GetMapping padre
+  @GetMapping // El @GetMapping vacio lleva al @RequestMapping padre
   public String listar(Model model){
     model.addAttribute("users", userRepo.findAll());
     return "users/usuarios"; // Este es el nombre del archivo html
