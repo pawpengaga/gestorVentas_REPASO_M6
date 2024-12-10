@@ -1,0 +1,25 @@
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  correo VARCHAR(150) UNIQUE NOT NULL
+);
+
+CREATE TABLE products(
+  id SERIAL PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  precio DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE sales(
+  id SERIAL PRIMARY KEY,
+  user_id INT NOT NULL REFERENCES users(id),
+  fecha_venta TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE sale_details(
+  id SERIAL PRIMARY KEY,
+  sale_id INT NOT NULL REFERENCES sales(id),
+  product_id INT NOT NULL REFERENCES products(id),
+  cantidad INT NOT NULL,
+  subtotal DECIMAL(12,2) NOT NULL
+);
