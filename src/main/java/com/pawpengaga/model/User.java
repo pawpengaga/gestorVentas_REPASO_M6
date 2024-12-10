@@ -4,6 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Clase para generar usuarios
+ * @author Erick Rivera
+ */
 @AllArgsConstructor // Constructor completo
 @NoArgsConstructor // Constructor sin argumentos
 @Data // Getters, setters y toString
