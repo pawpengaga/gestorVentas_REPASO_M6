@@ -13,6 +13,8 @@ Aplicacion de gestión de punto de venta con Usuarios y Detalle
 - SCHEMA crea la estructura de las tablas
 - DATA crea los primeros registros
 
+- Se usa la arquitectura de capas, separando los repos de los servicios para hacer un uso de efectivo de los servicios en los **repositorios**
+
 ## Curiosidades
 
 Las cosas que nos ahorra `@Autowired`
