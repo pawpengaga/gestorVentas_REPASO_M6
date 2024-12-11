@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.pawpengaga.model.Product;
-import com.pawpengaga.service.ProductService;
+import com.pawpengaga.repository.ProductRepository;
 
 @Controller
 @RequestMapping("/products")
 public class ProductsController {
 
   @Autowired
-  ProductService productService;
+  ProductRepository productRepo;
 
   @GetMapping
   public String listar(Model model){
-    model.addAttribute("products", productService.getAllProducts());
+    model.addAttribute("products", productRepo.findAll());
     return "products/productos";
   }
 
@@ -32,7 +32,7 @@ public class ProductsController {
 
   @PostMapping()
   public String graba(@ModelAttribute Product product){
-    productService.createProduct(product);
+    productRepo.save(product);
     return "redirect:/products";
   }
 
