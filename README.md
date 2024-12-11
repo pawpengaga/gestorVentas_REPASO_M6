@@ -2,6 +2,14 @@
 
 Aplicacion de gestión de punto de venta con Usuarios y Detalle
 
+## PENDIENTES
+
+- Las vistas son un desastre...
+
+## Investigar
+
+Desde la vista con Javacript, crear un **Array de Objetos** para crear un ingreso en batch de los detalles
+
 ## Novedades
 - Pool de conexiones
 - Archivo `schema.sql` para crear las tablas **desde la app**

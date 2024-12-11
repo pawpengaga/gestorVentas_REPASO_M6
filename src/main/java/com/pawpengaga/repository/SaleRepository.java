@@ -23,7 +23,7 @@ public class SaleRepository {
   }
 
   public int save(Sale saleInput){
-    String sql = "INSERT INTO sales (user_id, fecha_venta) VALUES (?, ?)";
+    String sql = "INSERT INTO sales (user_id, fecha_venta) VALUES (?, ?) RETURNING id"; // Devolvemos el id de la venta para usarla en el detalle
     return jdbc.update(sql, saleInput.getUserId(), saleInput.getFechaVenta());
   }
 
